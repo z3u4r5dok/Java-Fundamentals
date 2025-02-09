@@ -6,17 +6,70 @@ Fundamentals Exercise 1: CLI
      3. Inside of folder Terminal_testing,
          a. create 3 new .txt files all with different names
          b. print the directory path
+         /Users/unknown_0/Java_/Work/CodingNomads/Terminal_testing
+
          c. list the contents of the folder
+         ➜  Terminal_testing ls -als
+         total 0
+         0 drwxr-xr-x   5 unknown_0  staff  160 Jan 21 14:46 .
+         0 drwxr-xr-x  10 unknown_0  staff  320 Jan 21 14:44 ..
+         0 -rw-r--r--   1 unknown_0  staff    0 Jan 21 14:45 chapulin.txt
+         0 -rw-r--r--   1 unknown_0  staff    0 Jan 21 14:45 fermin.txt
+         0 -rw-r--r--   1 unknown_0  staff    0 Jan 21 14:46 karajo.txt
+
      5. Inside of folder Terminal_testing, create a new folder
      6. Copy a file from Terminal_testing to the new folder
      7. Move a different file from Terminal_testing to the new folder
      8. Demonstrate removing:
          a. A file
+         ➜  Terminal_testing ls -als new_folder
+         total 0
+         0 drwxr-xr-x  4 unknown_0  staff  128 Jan 21 14:49 .
+         0 drwxr-xr-x  5 unknown_0  staff  160 Jan 21 14:49 ..
+         0 -rw-r--r--  1 unknown_0  staff    0 Jan 21 14:49 chapulin.txt
+         0 -rw-r--r--  1 unknown_0  staff    0 Jan 21 14:45 fermin.txt
+         ➜  Terminal_testing rm -v new_folder/chapulin.txt
+         new_folder/chapulin.txt
+         ➜  Terminal_testing ls -als new_folder
+         total 0
+         0 drwxr-xr-x  3 unknown_0  staff   96 Jan 21 14:52 .
+         0 drwxr-xr-x  5 unknown_0  staff  160 Jan 21 14:49 ..
+         0 -rw-r--r--  1 unknown_0  staff    0 Jan 21 14:45 fermin.txt
+
          b. A folder
+         ➜  Terminal_testing ls -als
+         total 0
+         0 drwxr-xr-x   5 unknown_0  staff  160 Jan 21 14:49 .
+         0 drwxr-xr-x  10 unknown_0  staff  320 Jan 21 14:44 ..
+         0 -rw-r--r--   1 unknown_0  staff    0 Jan 21 14:45 chapulin.txt
+         0 -rw-r--r--   1 unknown_0  staff    0 Jan 21 14:46 karajo.txt
+         0 drwxr-xr-x   3 unknown_0  staff   96 Jan 21 14:52 new_folder
+         ➜  Terminal_testing rm -frv new_folder
+         new_folder/fermin.txt
+         new_folder
+         ➜  Terminal_testing ls -als
+         total 0
+         0 drwxr-xr-x   4 unknown_0  staff  128 Jan 21 15:00 .
+         0 drwxr-xr-x  10 unknown_0  staff  320 Jan 21 14:44 ..
+         0 -rw-r--r--   1 unknown_0  staff    0 Jan 21 14:45 chapulin.txt
+         0 -rw-r--r--   1 unknown_0  staff    0 Jan 21 14:46 karajo.txt
+
      9. CHALLENGE:
          a. Use $ vim to write some text inside a file
+         ➜  Terminal_testing vim chapulin.txt
+
          b. Use $ cat print contents of file
+         ➜  Terminal_testing cat chapulin.txt
+         Writing some text
+
          c. Use $ grep to search for a word inside file
+         ➜  Terminal_testing grep "some" chapulin.txt
+         Writing some text
+
+         ➜  Terminal_testing grep -w 'some' chapulin.txt
+         Writing some text
+         ➜  Terminal_testing
+
 
 Example Output:
     1. cd ~/Documents/CodingNomads/
